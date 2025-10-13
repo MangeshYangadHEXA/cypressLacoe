@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-07-24T10:11:50.694Z",
+    "end": "2025-07-24T10:12:29.537Z",
+    "duration": 38843,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9e9ecdb-b6c4-4dbf-8c2d-79f72d42a121",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Disposal.cy.js",
+      "file": "cypress\\e2e\\Disposal.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a3a8aaf8-ba37-40f3-92aa-13b77b2cca9e",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Start",
+              "fullTitle": "template spec Test Start",
+              "timedOut": null,
+              "duration": 22,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "2449533a-c6d6-4809-ab22-e38b5409ea4a",
+              "parentUUID": "a3a8aaf8-ba37-40f3-92aa-13b77b2cca9e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Disposal add",
+              "fullTitle": "template spec Disposal add",
+              "timedOut": null,
+              "duration": 35676,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai/'); // This will npx \ncy.xpath('//input[@id=\"username\"]', {\n  timeout: 10000\n}).should('be.visible').type('admin@gmail.com');\ncy.xpath(\"//input[@placeholder='Password']\").type(\"123456\");\ncy.xpath(\"//div[text()='Login']\").click();\ncy.wait(5000);\ncy.visit(\"https://uat-assetfusion360-lacoe.hexalytics.ai/common/disposal\");\ncy.wait(1000);\ncy.get(\".loco-plus\").click();\ncy.get(\"[data-pc-section='dropdownicon']\").eq(2).click();\ncy.get(\"#dropdownItem_0\").click();\ncy.wait(1000);\ncy.get(\"[data-pc-section='dropdownicon']\").eq(4).click();\ncy.get(\"#dropdownItem_0\").click();\ncy.get(\"[data-pc-section='dropdownicon']\").eq(5).click();\ncy.get(\"#dropdownItem_0\").click();\ncy.get(\"[data-pc-section='dropdownicon']\").eq(6).click();\ncy.get(\"#dropdownItem_0\").click();\ncy.get(\"[data-pc-section='dropdownicon']\").eq(7).click();\ncy.get(\"#dropdownItem_0\").click();\n//cy.xpath(\"//button[contains(@type,'submit')]\").click()\ncy.wait(3000);\ncy.xpath(\"//button[text()='Apply']\").click();\ncy.get(\"[type='checkbox']\").click();\ncy.wait(3000);\ncy.get(\".loco-plus\").click();\ncy.xpath(\"//a[text()='Preview']\").click();\ncy.wait(3000);\ncy.get(\"[title='Scroll right']\").click();\ncy.wait(1000);\ncy.get(\"[placeholder='00.00']\").type(56.70);\ncy.get(\"[data-pc-name='inputtext']\").eq(3).type(\"Intel\");\n//cy.xpath(\"//button[text()='Dispose']\").click()",
+              "err": {
+                "message": "CypressError: `cy.type()` can only be called on a single element. Your subject contained 2 elements.\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only be called on a single element. Your subject contained 2 elements.\n\nhttps://on.cypress.io/type\n    at Context.type (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:116744:68)\n    at wrapped (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:141524:19)\nFrom Your Spec Code:\n    at Object.proxyGetter [as get] (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:80289:22)\n    at exists (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:146379:26)\n    at elExists (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:146394:10)\n    at ensureExistence (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:146575:22)\n    at onFailFn (https://uat-assetfusion360-lacoe.hexalytics.ai/__cypress/runner/cypress_runner.js:146604:53)",
+                "diff": null
+              },
+              "uuid": "8eab8abf-fc2e-442a-885a-13360d7bbe7d",
+              "parentUUID": "a3a8aaf8-ba37-40f3-92aa-13b77b2cca9e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2449533a-c6d6-4809-ab22-e38b5409ea4a"
+          ],
+          "failures": [
+            "8eab8abf-fc2e-442a-885a-13360d7bbe7d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35698,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

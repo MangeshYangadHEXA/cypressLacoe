@@ -1,19 +1,12 @@
 describe('template spec', () => {
+ it('Test Start', () => {
+
+ })
 
 
-// beforeEach(() => {
-//   cy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai');
-//   cy.xpath('//input[@id="username"]',{ timeout: 4000 })
-//   .should('be.visible').type('admin@gmail.com');
-//   cy.xpath("//input[@placeholder='Password']").type("123456")
-//   cy.xpath("//div[text()='Login']").click()
-  
-//});
-
-
-    it('test title', () => {
-    cy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai')
-    cy.title().should('eq','LACOE | User Login')
+it('test title', () => {
+cy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai')
+cy.title().should('eq','LACOE | User Login')
 
   })
 // Prevent Cypress from navigating away
@@ -32,13 +25,7 @@ Cypress.on('window:before:load', (win) => {
   
   cy.wait(3000)
   cy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai/admin/assetlist');
-  //cy.xpath("(//i[@class='loco-arrow-right-outline text-[#C9D0DB] text-[18px] 3xl:text-[0.938vw]'])[1]").click
-  
-  //cy.xpath("//li[3]//a[1]//img[1]").hover
-  //cy.xpath("//a[@id='menu_5']").click
-  //cy.visit("https://uat-assetfusion360-lacoe.hexalytics.ai/admin/asset/quickadd");
-  //cy.visit("https://uat-assetfusion360-lacoe.hexalytics.ai/admin/assetlist");
-  
+ 
   cy.xpath("(//span[text()='Add New'])[2]").click
   cy.visit("https://uat-assetfusion360-lacoe.hexalytics.ai/admin/assetlist/adminaddasset")
   cy.xpath("(//div[@class='p-dropdown-trigger'])[3]").click()
@@ -116,8 +103,7 @@ Cypress.on('window:before:load', (win) => {
 
   })
   
-  })
-
+ 
   it('test EditAsset', () => {
   
   cy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai/');
@@ -129,20 +115,20 @@ Cypress.on('window:before:load', (win) => {
   
   cy.wait(4000)  
 
-  //  cy.xpath("//i[@class='loco-arrow-right-outline text-[#C9D0DB] text-[18px] 3xl:text-[0.938vw]']").click()
-
    cy.visit("https://uat-assetfusion360-lacoe.hexalytics.ai/admin/assetlist");
     
-   //cy.get("[title='Edit']").eq(0).click()
-
    cy.wait(3000)
-   cy.xpath("//div[text()='7']").click()
+   cy.get("[title='Edit']").eq(0).click()
 
-   cy.wait(1000)
+   cy.wait(2000)
+   cy.xpath("//div/h6[text()='More Information']").click()
+   
+   cy.wait(2000)
    cy.xpath("//button[text()='Update']").click()
 
 
   })
 
+ })
 
 

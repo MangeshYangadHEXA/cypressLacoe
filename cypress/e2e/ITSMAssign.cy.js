@@ -23,6 +23,7 @@ Cypress.on('window:before:load', (win) => {
   cy.wait(2000)
   cy.xpath("//button[text()='New Tickets']").click()
 
+  cy.wait(2000)
   cy.scrollTo(0, 500);
   //cy.xpath("//tbody/tr[1]/td[19]/div[1]/button[1]/div[1]/img[1]").click()
   //cy.wait(3000)
@@ -37,15 +38,17 @@ Cypress.on('window:before:load', (win) => {
   cy.get('.pi.pi-bolt').click()
   cy.xpath("//button[text()='Assign']").click()
 
-  cy.xpath("//span[text()='--Select Team--']").click()
+  cy.xpath("//span[text()='--Select Team--']").click()//selecting team
 
   cy.get("#dropdownItem_0").click()
+ 
+  cy.wait(2000)
 
   //cy.xpath("//span[text()='LACOE Resolution code']").click()
   
   //cy.get(".w-full.p-inputtextarea.p-inputtext.p-component.p-filled").type('Test Purpose')
 
-  cy.get("[data-pc-section='dropdownicon']").eq(8).click()
+  cy.get("[data-pc-section='dropdownicon']").eq(10).click() //Selecting Technician
 
   cy.get("#dropdownItem_1").click()
 

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-07-24T10:12:31.534Z",
+    "end": "2025-07-24T10:13:03.907Z",
+    "duration": 32373,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7555d6da-8f01-4c9e-b87f-8d28dcc6214d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\EmployeeAdd.cy.js",
+      "file": "cypress\\e2e\\EmployeeAdd.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81b046f2-d74b-4cd5-a81b-ec0450580e86",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Start",
+              "fullTitle": "template spec Test Start",
+              "timedOut": null,
+              "duration": 53,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "35d09697-9ef8-4a2f-be01-e56a1e5b2c1a",
+              "parentUUID": "81b046f2-d74b-4cd5-a81b-ec0450580e86",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Employee add",
+              "fullTitle": "template spec Employee add",
+              "timedOut": null,
+              "duration": 30438,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1. Visit the base URL of your application or the page where the menu exists\n// (Adjust this if you need to perform login first)\ncy.visit('https://uat-assetfusion360-lacoe.hexalytics.ai/'); // This will go to https://lacoe.hexalytics.ai/ based on baseUrl\ncy.xpath('//input[@id=\"username\"]', {\n  timeout: 10000\n}).should('be.visible').type('admin@gmail.com');\ncy.xpath(\"//input[@placeholder='Password']\").type(\"123456\");\ncy.xpath(\"//div[text()='Login']\").click();\ncy.wait(5000);\n//cy.xpath(\"//i[@class='loco-arrow-right-outline text-[#C9D0DB] text-[18px] 3xl:text-[0.938vw]']\").click()\ncy.visit(\"https://uat-assetfusion360-lacoe.hexalytics.ai/admin/employee\");\ncy.get(\".loco-plus\").click();\ncy.wait(3000);\ncy.get(\"[class='p-dropdown-trigger']\").click();\ncy.get('#dropdownItem_2 > .p-dropdown-item-label').click();\ncy.get(\"[placeholder='First Name']\").type('Joe');\ncy.get(\"[placeholder='Middle Name']\").type('C');\ncy.get(\"[placeholder='Last Name']\").type('Stone');\ncy.get(\"[placeholder='Email']\").type('joestone@gmail.com');\ncy.xpath(\"//a[text()='Next']\").click();\ncy.wait(2000);\ncy.xpath(\"//a[text()='Next']\").click();\ncy.wait(3000);\ncy.scrollTo(0, 500);\ncy.get(\"[class='p-dropdown-label p-inputtext p-placeholder']\").eq(0).click();\ncy.get(\"#dropdownItem_1\").click();\ncy.wait(2000);\ncy.get(':nth-child(2) > .custDropdown > .w-full > .p-dropdown-trigger').click();\ncy.get(\"#dropdownItem_1\").click();\n//cy.get(\"[data-pc-name='button']\").click()",
+              "err": {},
+              "uuid": "b817d95e-520a-4143-8859-05baa25b915a",
+              "parentUUID": "81b046f2-d74b-4cd5-a81b-ec0450580e86",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "35d09697-9ef8-4a2f-be01-e56a1e5b2c1a",
+            "b817d95e-520a-4143-8859-05baa25b915a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30491,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
